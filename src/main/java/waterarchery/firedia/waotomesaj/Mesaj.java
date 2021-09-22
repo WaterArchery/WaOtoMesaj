@@ -48,7 +48,7 @@ public class Mesaj {
             }
             Sound ses = Sound.valueOf(sesStr);
             Bukkit.getOnlinePlayers().forEach(o -> o.playSound(o.getLocation(), ses, 1, 1));
-        }catch(Exception e) {
+        } catch(Exception e) {
             wapi.KonsolaMesajGonder("&cLütfen configdeki ses ayarını değiştirin veya kapatmak için ayarı 'yok' olarak değiştirin.", true);
         }
     }

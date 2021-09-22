@@ -15,7 +15,7 @@ public final class OtoMesajMain extends JavaPlugin {
     private static Plugin pl;
     private static WaterCore wapi;
     private static List<Mesaj> mesajlar = new ArrayList<>();
-    private static BukkitTask mesajTask;
+    private static ArrayList<BukkitTask> mesajTasklar = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -43,7 +43,7 @@ public final class OtoMesajMain extends JavaPlugin {
         }
         int mesajArasiZaman = wapi.ConfigdenInt("MesajAraligi");
         int tumZaman = mesajArasiZaman * mesajlar.size();
-        mesajTask = new BukkitRunnable() {
+        BukkitTask mainTask = new BukkitRunnable() {
             @Override
             public void run() {
                 if (wapi.ConfigdenBool("Rastgele")) {
@@ -51,23 +51,25 @@ public final class OtoMesajMain extends JavaPlugin {
                 }
                 int i = 0;
                 for (Mesaj mesaj : mesajlar) {
-                    new BukkitRunnable() {
+                    BukkitTask mesajTask = new BukkitRunnable() {
                         @Override
                         public void run() {
                             mesaj.MesajGonder();
                         }
                     }.runTaskLater(pl,i * 20L * mesajArasiZaman);
+                    mesajTasklar.add(mesajTask);
                     i++;
                 }
             }
         }.runTaskTimer(pl, 0, 20L * tumZaman);
+        mesajTasklar.add(mainTask);
     }
 
     public static Plugin getPlugin() { return pl; }
 
     public static WaterCore getWapi() { return wapi; }
 
-    public static BukkitTask getTask(){ return mesajTask; }
+    public static ArrayList<BukkitTask> getTask(){ return mesajTasklar; }
 
     public static void setWapi(WaterCore wapi) { OtoMesajMain.wapi = wapi; }
 }

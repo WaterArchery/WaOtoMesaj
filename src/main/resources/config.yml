@@ -7,11 +7,11 @@ MesajAraligi: 300
 #Mesajlar rastgele mi gönderilsin yoksa sırayla mı
 Rastgele: true
 #Mesajların ilk ve son satırına allttaki mesaj eklenir. Kullanmak istemiyorsanız 'yok' yapın.
-BasVeSonMesaj: '&8-------------------------%prefix%-------------------------'
+BasVeSonMesaj: '&8---------------------%prefix%&8---------------------'
 #Mesajlar
 Mesajlar:
   1:
-    - '<ortala>&aSunucumuzda %online% kişi oynuyor'
+    - '<ortala>&aSunucumuzda &c%online% &akişi oynuyor'
     - ''
     - '<ortala>&7Bizi &6tercih &7ettiğiniz için teşekkür ederiz.'
   2:

@@ -18,7 +18,7 @@ public class MainKomut implements CommandExecutor {
                 if (args[0].equalsIgnoreCase("reload")) {
                     if (sender.hasPermission("waoto.reload")) {
                         OtoMesajMain.getPlugin().reloadConfig();
-                        OtoMesajMain.getTask().cancel();
+                        OtoMesajMain.getTask().forEach(task -> task.cancel());
                         OtoMesajMain.MesajGondermeBaslat();
                         WaterCore yeniWapi = new WaterCore(OtoMesajMain.getPlugin().getConfig().getString("Prefix"), OtoMesajMain.getPlugin());
                         OtoMesajMain.setWapi(yeniWapi);
