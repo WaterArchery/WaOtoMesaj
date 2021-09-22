@@ -13,11 +13,6 @@ public abstract class DataManager {
             OtoMesajMain.getPlugin().saveResource("config.yml", false);
         }
         OtoMesajMain.getPlugin().saveDefaultConfig();
-        OtoMesajMain.getPlugin().reloadConfig();
-    }
-
-    public static FileConfiguration getConfig(){
-        return OtoMesajMain.getPlugin().getConfig();
     }
 
 }
