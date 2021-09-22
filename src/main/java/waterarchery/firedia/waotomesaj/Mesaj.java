@@ -31,6 +31,9 @@ public class Mesaj {
             if (mesaj.contains("<ortala>")) {
                 mesaj = getOrtalanmisMesaj(mesaj);
             }
+            if (mesaj.contains("%online%")) {
+                mesaj = mesaj.replace("%online%", pl.getServer().getOnlinePlayers().size() + "");
+            }
             wapi.BroadcastGonder(mesaj, false);
         }
         SesGonder();
@@ -46,8 +49,7 @@ public class Mesaj {
             Sound ses = Sound.valueOf(sesStr);
             Bukkit.getOnlinePlayers().forEach(o -> o.playSound(o.getLocation(), ses, 1, 1));
         }catch(Exception e) {
-            wapi.KonsolaMesajGonder("&cLütfen configdeki ses ayarını değiştirin veya kapatmak için", true);
-            wapi.KonsolaMesajGonder("&cAyarı 'yok' olarak değiştirin.", true);
+            wapi.KonsolaMesajGonder("&cLütfen configdeki ses ayarını değiştirin veya kapatmak için ayarı 'yok' olarak değiştirin.", true);
         }
     }
 

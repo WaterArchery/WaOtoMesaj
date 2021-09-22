@@ -4,9 +4,9 @@ MesajAraligi: 5
 Rastgele: false
 Mesajlar:
   1:
-    - '&7Deneme %prefix%'
+    - '&7Deneme %prefix% %online%'
     - '&aDeneme2'
   2:
     - 'Deneme3'
     - 'Deneme4'
-BasVeSonMesaj: '&8-------------------------%prefix%--------------------'
+BasVeSonMesaj: '&8-------------------------%prefix%-------------------------'
