@@ -9,6 +9,9 @@ Rastgele: true
 #Mesajların ilk ve son satırına allttaki mesaj eklenir. Kullanmak istemiyorsanız 'yok' yapın.
 BasVeSonMesaj: '&8---------------------%prefix%&8---------------------'
 #Mesajlar
+#<ortala> mesajı ortalar
+#%online% sunucu onlinesini gösterir.
+#Daha fazla özellik için Discord: WaterArchery#3814
 Mesajlar:
   1:
     - '<ortala>&aSunucumuzda &c%online% &akişi oynuyor'
