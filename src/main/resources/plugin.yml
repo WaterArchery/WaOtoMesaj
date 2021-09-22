@@ -1,0 +1,12 @@
+name: WaOtoMesaj
+version: '${project.version}'
+main: waterarchery.firedia.waotomesaj.OtoMesajMain
+api-version: 1.16
+authors: [ WaterArchery ]
+description: Otomatik mesaj gönderme plugini
+commands:
+  waotomesaj:
+    description: Ana komut
+  wom:
+    description: Ana komut
+

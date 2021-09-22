@@ -1,0 +1,12 @@
+Prefix: '&8[&6waOtoMesaj&8]'
+Ses: 'ENTITY_EXPERIENCE_ORB_PICKUP'
+MesajAraligi: 5
+Rastgele: false
+Mesajlar:
+  1:
+    - '&7Deneme %prefix%'
+    - '&aDeneme2'
+  2:
+    - 'Deneme3'
+    - 'Deneme4'
+BasVeSonMesaj: '&8-------------------------%prefix%--------------------'
