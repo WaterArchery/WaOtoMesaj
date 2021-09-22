@@ -1,12 +1,18 @@
+#%prefix% etiketi kullanılınca çıkacak mesaj
 Prefix: '&8[&6waOtoMesaj&8]'
+#Mesaj gidince oyuncuda çalacak ses. Kullanmak istemiyorsanız 'yok' yapın.
 Ses: 'ENTITY_EXPERIENCE_ORB_PICKUP'
-MesajAraligi: 5
-Rastgele: false
+#Kaç saniyede bir mesaj göndersin
+MesajAraligi: 300
+#Mesajlar rastgele mi gönderilsin yoksa sırayla mı
+Rastgele: true
+#Mesajların ilk ve son satırına allttaki mesaj eklenir. Kullanmak istemiyorsanız 'yok' yapın.
+BasVeSonMesaj: '&8-------------------------%prefix%-------------------------'
+#Mesajlar
 Mesajlar:
   1:
-    - '&7Deneme %prefix% %online%'
-    - '&aDeneme2'
+    - '<ortala>&aSunucumuzda %online% kişi oynuyor'
+    - ''
+    - '<ortala>&7Bizi &6tercih &7ettiğiniz için teşekkür ederiz.'
   2:
-    - 'Deneme3'
-    - 'Deneme4'
-BasVeSonMesaj: '&8-------------------------%prefix%-------------------------'
+    - '%prefix% &7Bizi tercih ettiğiniz için teşekkür ederiz'
